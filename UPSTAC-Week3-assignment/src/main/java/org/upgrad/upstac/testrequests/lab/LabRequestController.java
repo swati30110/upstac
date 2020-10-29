@@ -99,6 +99,8 @@ public class LabRequestController {
 
         }catch (AppException e) {
             throw asBadRequest(e.getMessage());
+        }catch (ResponseStatusException e){
+            throw asBadRequest(e.getMessage());
         }
     }
 
